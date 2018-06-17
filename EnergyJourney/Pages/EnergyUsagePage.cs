@@ -26,7 +26,7 @@ namespace EnergyJourney.Pages
         private IWebElement btnSubmit;
 
         public void enterFuelUsage(int annualElectricity, int annualGas) {
-            Thread.Sleep(1000);
+            
             var fuel = ScenarioContext.Current["selectedFuelType"];
 
             switch (fuel) {
@@ -34,20 +34,14 @@ namespace EnergyJourney.Pages
                     inputElectricity.SendKeys(annualElectricity.ToString());
                     inputGas.SendKeys(annualGas.ToString());
                     btnSubmit.Click();
-                    //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
-                    //IWebElement myDynamicElement = wait.Until<IWebElement>(d => btnGasElectricity)));
-                    Thread.Sleep(5000); //bad practice but ok for now since above WebDriverWait is not working for some reason
-
                     break;
                 case "Electricity":
                     inputElectricity.SendKeys(annualElectricity.ToString());
                     btnSubmit.Click();
-                    Thread.Sleep(5000);
                     break;
                 case "Gas":
                     inputGas.SendKeys(annualGas.ToString());
                     btnSubmit.Click();
-                    Thread.Sleep(5000);
                     break;
                 default:
                     throw new ArgumentException("Invalid Fuel. We don't cater for this fuel type at the moment");

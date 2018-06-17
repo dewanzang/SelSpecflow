@@ -23,6 +23,8 @@ namespace EnergyJourney.Pages
         private IWebElement btnNextOk;
 
         public void SelectPaperlessBilling(Boolean paperlessBilling) {
+            //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+            //IWebElement myDynamicElement = wait.Until<IWebElement>(d => btnNextOk)));
             Thread.Sleep(1000);
             if (paperlessBilling) {
                 btnPaperlessBillingYes.Click();
@@ -31,9 +33,6 @@ namespace EnergyJourney.Pages
 
             ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", btnNextOk);
 
-            //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
-            //IWebElement myDynamicElement = wait.Until<IWebElement>(d => btnNextOk)));
-            Thread.Sleep(1000);
             ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click();", btnNextOk);
 
         }

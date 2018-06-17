@@ -10,12 +10,12 @@ namespace EnergyJourney.Pages
 
         public static void Initialize() {
             //driver = new FirefoxDriver();
-            //driver.Manage().Timeouts().ImplicitWait(TimeSpan.FromSeconds(5));
             //driver.Manage().Window.Maximize();
 
             ChromeOptions options = new ChromeOptions();
             options.AddArgument("--start-maximized");
             driver = new ChromeDriver(options);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
         public static void Close() {

@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using TechTalk.SpecFlow;
 using System.Threading;
+using OpenQA.Selenium.Support.UI;
 
 namespace EnergyJourney.Pages
 {
@@ -29,10 +30,7 @@ namespace EnergyJourney.Pages
 
         public void SelectFuelType(String fuelType) {
             ScenarioContext.Current["selectedFuelType"] = fuelType;
-            //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
-            //IWebElement myDynamicElement = wait.Until<IWebElement>(d => btnGasElectricity)));
-            Thread.Sleep(7000); //bad practice but ok for now since above WebDriverWait is not working for some reason
-
+            
             switch (fuelType)
             {
                 case "Gas & Electricity":

@@ -23,6 +23,8 @@ namespace EnergyJourney.Pages
         private IWebElement btnNextOk;
 
         public void SelectSmartMeter(Boolean smartMeter) {
+            //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+            //IWebElement myDynamicElement = wait.Until<IWebElement>(d => btnNextOk)));
             Thread.Sleep(1000);
             if (smartMeter) {
                 btnEconomyMeterYes.Click();
@@ -30,10 +32,7 @@ namespace EnergyJourney.Pages
                 btnEconomyMeterNo.Click();
 
             ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", btnNextOk);
-
-            //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
-            //IWebElement myDynamicElement = wait.Until<IWebElement>(d => btnNextOk)));
-            Thread.Sleep(1000);
+                        
             ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click();", btnNextOk);
 
         }

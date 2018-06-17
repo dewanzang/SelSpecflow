@@ -25,7 +25,7 @@ namespace EnergyJourney.Pages
         }
 
         public void navigateToGasInformation() {
-            Thread.Sleep(1000);
+            
             lnkGasInformation.Click();
         }
     }

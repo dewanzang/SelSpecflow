@@ -19,3 +19,5 @@ Scenario Outline: The standing charge for SSE 1 Year Fixed v15 should be 19.18
 	Examples: 
 	| PostCode  | Fuel Type          | Smart Meter | Economy 7 | Payment Type           | Paperless Billing | Annual Electricity | Annual Gas | Electricity Standing Charge | Gas Standing Charge |
 	| 'PO9 1QH' | 'Gas & Electricity'| true        | false     | 'Monthly Direct Debit' | true              | 4500               | 4520       | 19.18                       | 19.18               |
+	| 'PO9 1QH' | 'Electricity'		 | true        | false     | 'Monthly Direct Debit' | true              | 4500               | 4520       | 19.18                       | 19.18               |
+	| 'PO9 1QH' | 'Gas'				 | true        | false     | 'Monthly Direct Debit' | true              | 4500               | 4520       | 19.18                       | 19.18               |

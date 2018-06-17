@@ -93,11 +93,27 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("The standing charge for SSE 1 Year Fixed v15 should be 19.18, \'PO9 1QH\'", SourceLine=20)]
-        public virtual void TheStandingChargeForSSE1YearFixedV15ShouldBe19_18_PO91QH()
+        [TechTalk.SpecRun.ScenarioAttribute("The standing charge for SSE 1 Year Fixed v15 should be 19.18, Variant 0", SourceLine=20)]
+        public virtual void TheStandingChargeForSSE1YearFixedV15ShouldBe19_18_Variant0()
         {
 #line 7
 this.TheStandingChargeForSSE1YearFixedV15ShouldBe19_18("\'PO9 1QH\'", "\'Gas & Electricity\'", "true", "false", "\'Monthly Direct Debit\'", "true", "4500", "4520", "19.18", "19.18", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("The standing charge for SSE 1 Year Fixed v15 should be 19.18, Variant 1", SourceLine=20)]
+        public virtual void TheStandingChargeForSSE1YearFixedV15ShouldBe19_18_Variant1()
+        {
+#line 7
+this.TheStandingChargeForSSE1YearFixedV15ShouldBe19_18("\'PO9 1QH\'", "\'Electricity\'", "true", "false", "\'Monthly Direct Debit\'", "true", "4500", "4520", "19.18", "19.18", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("The standing charge for SSE 1 Year Fixed v15 should be 19.18, Variant 2", SourceLine=20)]
+        public virtual void TheStandingChargeForSSE1YearFixedV15ShouldBe19_18_Variant2()
+        {
+#line 7
+this.TheStandingChargeForSSE1YearFixedV15ShouldBe19_18("\'PO9 1QH\'", "\'Gas\'", "true", "false", "\'Monthly Direct Debit\'", "true", "4500", "4520", "19.18", "19.18", ((string[])(null)));
 #line hidden
         }
         
